@@ -1,8 +1,16 @@
 .box-grid {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   width: 270px;
   grid-area: "product-list";
+
+  h1 {
+    color: var(--text-primary);
+    width: auto;
+    font-weight: 700;
+    text-align: start;
+  }
 
   .list-grid {
     background-color: var(--bg-primary);
@@ -18,22 +26,35 @@
       "product"
       "product"
       "product";
+      gap: 30px;
   }
 
-  @media (width<=992px) {
-    // tablet
+  @media (width >= 768px) and (width<992px) {
+    align-items: center;
+    width: 500px;
+    .list-grid {
+      grid-template-areas:
+        "product product"
+        "product product"
+        "product product";
+    }
+  }
+
+  @media (width>=992px) and (width<1200px) {
+    // tablet grande
+    align-items: center;
     width: 800px;
     .list-grid {
       grid-template-areas:
         "product product"
         "product product"
         "product product";
-      gap: 30px;
     }
   }
 
-  @media (width<=1200px) {
+  @media (width>=1200px) and (width<1400px) {
     // desktop
+    align-items: center;
     width: 700px;
     .list-grid {
       grid-template-areas:
@@ -41,7 +62,6 @@
         "product product"
         "product product"
         "product product";
-      gap: 30px;
     }
   }
 
@@ -54,7 +74,6 @@
         "product product product"
         "product product product"
         "product product product";
-      gap: 30px;
     }
   }
 }

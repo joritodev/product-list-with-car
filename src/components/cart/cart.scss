@@ -1,12 +1,13 @@
-.box {
+.box-cart {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   background-color: white;
   border-radius: 12px;
+  width: 270px;
   height: auto;
   grid-area: "cart";
-  margin-left: 30px;
+
 
   h2 {
     padding-top: 15px;
@@ -30,8 +31,15 @@
     }
   }
 
+
+  @media (width>=768px) and (width<1400px) {
+    width: 570px;
+    margin: 0;
+  }
+
   @media (width>=1400px) {
     width: 300px;
     height: 300px;
+    margin-left: 30px;
   }
 }

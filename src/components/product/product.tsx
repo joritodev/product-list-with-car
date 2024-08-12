@@ -7,15 +7,28 @@ interface ProductProps {
   image: string;
   productType: string;
   productName?: string;
-  productPrice?: string;
-  amount: 0;
+  productPrice?: number;
+  amount: number;
 }
 export function Product({
   image,
   productType,
   productName,
   productPrice,
+  amount
 }: ProductProps) {
+  const handleAddFromCart = () => {
+    
+  }
+
+  const handleIncreseFromCart = () => {
+
+  }
+
+  const handleDecreaseFromCart = () => {
+
+  }
+
   return (
     <div className="box-product">
       <img src={image} alt={productName} />
@@ -28,7 +41,7 @@ export function Product({
             <AddToCart />
             <span>Add to Cart</span>
           </div>
-          <span className="amount">{1}</span>
+          <span className="amount">{amount}</span>
           <a className="increment">
             <IncrementIcon />
           </a>
