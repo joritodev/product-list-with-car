@@ -1,0 +1,107 @@
+.box-product {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    height: 310px;
+    width: 270px;
+    z-index: 0;
+    
+    grid-area: "product";
+
+    img {
+        width: 270px;
+        height: 200px;
+        border-radius: 10px;
+        z-index: 1;
+    } 
+
+    .cart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 270px;
+        position: absolute;
+        z-index: 2;
+        top: 175px;
+        
+        .addcart{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            border: 2px solid var(--text-secondary);
+            border-radius: 24px;
+            height: 40px;
+            width: 150px;
+            background-color: var(--btn-primary);
+
+            a {
+                display: none;
+            }
+            
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .amount {
+                display: none;
+            }
+        } 
+
+        .addcart:hover {
+            border-color: var(--btn-secondary);
+        }
+
+        .addcart:active{
+            background-color: var(--btn-secondary);
+            border-color: var(--btn-secondary);
+            justify-content: space-around;
+            
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid var(--bg-primary);
+                border-radius: 50%;
+                height: 15px;
+                width: 15px;
+            }
+
+            div {
+                display: none;
+            }
+
+            .amount {
+                display: inline;
+                color: var(--bg-primary);
+            }
+        }
+    }
+
+    .productName-price {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 4px;
+        width: 270px;
+        height: 120px;
+        background-color: var(--bg-primary);
+
+        span {
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+        .name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .price {
+            font-weight: 600;
+            color: var(--text-price);
+        }
+
+    }
+    
+}

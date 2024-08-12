@@ -1,0 +1,60 @@
+.box-grid {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  grid-area: "product-list";
+
+  .list-grid {
+    background-color: var(--bg-primary);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "product"
+      "product"
+      "product"
+      "product"
+      "product"
+      "product"
+      "product"
+      "product"
+      "product";
+  }
+
+  @media (width<=992px) {
+    // tablet
+    width: 800px;
+    .list-grid {
+      grid-template-areas:
+        "product product"
+        "product product"
+        "product product";
+      gap: 30px;
+    }
+  }
+
+  @media (width<=1200px) {
+    // desktop
+    width: 700px;
+    .list-grid {
+      grid-template-areas:
+        "product product"
+        "product product"
+        "product product"
+        "product product";
+      gap: 30px;
+    }
+  }
+
+  @media (width>=1400px) {
+    // desktop grande
+    width: 900px;
+    .list-grid {
+      margin-top: 30px;
+      grid-template-areas:
+        "product product product"
+        "product product product"
+        "product product product";
+      gap: 30px;
+    }
+  }
+}
